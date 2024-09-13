@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+
+:root {
+    --main-theme: #032536;
+    --button-text: white;
+    --button-theme: #477186;
+    --node-theme: #113C51;
+    --node-border-theme: #27556C;
+    --val-next-theme: #477186;
+    --val-next-text: #e2eff1;
+    --travel-node-theme: #abcecf;
+    --travel-node-border: #80a3a2;
+    --travel-node-text: #36595f;
+    --current-node-theme: #dbd8e3;
+    --current-node-border: #5c5470;
+    --current-node-text: #2a2438;
+}
+html {
+    background-color: var(--main-theme);
+}
+
+/* Operations section*/
+
+.operations {
+    position: fixed;
+    bottom: 2em;
+    left: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.method {
+    display: flex;
+    gap: 2em;
+}
+
+.in {
+    opacity: 0;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.in > pre {
+    color: var(--button-text);
+}
+
+.in > input {
+    padding: 0.5em;
+    width: 4rem;
+}
+
+.but, .start {
+    color: var(--button-text);
+    padding: 1em;
+    background-color: var(--button-theme);
+    border: none;
+    border-radius: 0.2em;
+}
+
+
+
+/* ----------------------*/
+
+
+/* list section */
+
+.list {
+    position: relative;
+    left: 10%;
+    display: inline;
+    top: 15vh;
+}
+
+
+/* ----------------------*/
+/* node section */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    gap: 1em;
+}
+
+.index {
+    color: white;
+    font-size: 2.5rem;
+}
+.node {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+    background-color: var(--node-theme);
+    border-radius: 0.5em;
+    border: 0.3em dashed var(--node-border-theme)
+}
+
+.node > * {
+    font-size: 1.5rem;
+    border: none;
+    padding: 0.2em;
+    border-radius: 0.2em;
+    background-color: var(--val-next-theme);
+    color: var(--val-next-text);
+}
+
+.next {
+    position: relative;
+}
+
+.line {
+    border-top: 0.3rem dashed var(--val-next-theme);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+}
+
+.null {
+    position: absolute;
+    left: 100%;
+    display: inline-block;
+    background-color: var(--val-next-theme);
+    padding: 0.5em;
+    border-radius: 0.2em;
+    transform: translateY(-50%);
+}
+
+/* ----------------------*/
+
+/* Travel Node section */
+
+.travel {
+    padding: 0.5em;
+    font-size: 1.5rem;
+    border: none;
+    color: var(--travel-node-text);
+    border: 0.3em solid var(--travel-node-border);
+    background-color: var(--travel-node-theme);
+    border-radius: 0.2em;
+    position: absolute;
+    z-index: 1000000;
+}
+
+.current {
+    background-color: var(--current-node-theme);
+    border: 0.3em solid var(--current-node-border);
+    color: var(--current-node-text);
+}
+
+.visit-line {
+    border: 0.15em solid var(--travel-node-border);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-105%);
+    z-index: -10000;
+}
+
+
+.current .visit-line {
+    border: 0.15em solid var(--current-node-border);
+}
+
+.line-newNode-current {
+    position: absolute;
+    top: 100%;
+    right: 102%;
+    height: 0.25em;
+    background-color:var(--current-node-border);
+    transform-origin: top right;
+    border-radius: 0.2em;
+}
+
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 10px;
+    }
+}

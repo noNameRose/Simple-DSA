@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+:root {
+    --background: rgb(38, 113, 88);
+    --method-background: rgb(113, 170, 151);
+    --text-size-method: 1rem;
+    --node-background: rgb(113, 170, 151);
+    --node-border: #E4DFDA;
+    --line-theme: #e5f1e3;
+    --travel-node-background: #ffe76a;
+    --travel-node-border: #e0ab5b;
+    --travel-node-text: #634258;
+    --found-node-background: #bddaa5;
+    --found-node-border: #548e87;
+    --found-node-text: #385b66;
+}
+
+html {
+    background-color: var(--background);
+    overflow: scroll;
+
+}
+
+/*  Operations bar section*/
+
+.operations {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+}
+.method {
+    color: white;
+    font-size: var(--text-size-method);
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.2em;
+    background-color: var(--method-background);
+}
+
+.in, .travel-type {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    opacity: 0;
+}
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.input {
+    font-size: var(--text-size-method);
+    padding: 0.5em;
+    width: 15%;
+}
+
+.start {
+    font-size: var(--text-size-method);
+    padding: 0.5em;
+    background-color: var(--found-node-border);
+    border: none;
+    border-radius: 0.2em;
+    color: white;
+}
+
+
+/* -------------------------*/
+
+
+/* Container Section*/
+
+
+.container {
+    position: relative;
+    left: 50%;
+    top: 10vh;
+    display: inline;
+}
+
+/* Node section*/
+
+.node {
+    background-color: var(--node-background);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: absolute;
+    border: 0.2em dashed var(--node-border);
+    z-index: 1000000;
+}
+
+
+.line {
+    border: none;
+    border-top: 0.2rem dashed var(--line-theme);
+    background-color: var(--background);
+    position: absolute;
+}
+
+.virtual-line {
+    position: absolute;
+    background-color: var(--travel-node-background);
+    height: 0.2rem;
+    border: none;
+}
+
+.up {
+    background-color: var(--found-node-background);
+}
+
+.line-right {
+    transform-origin: top left;
+    top: 50%;
+    left: 50%;
+    z-index: -100000;
+}
+
+.line-left {
+    transform-origin: top right;
+    top: 50%;
+    right: 50%;
+    z-index: -10000000;
+}
+
+
+
+.val {
+    color: white;
+}
+.child {
+    position: absolute;
+    display: flex;
+}
+
+.ref {
+    position: relative;
+    top: 1.2em;
+    background-color: var(--node-background);
+    color: white;
+    padding: 0.1em;
+    border-radius: 0.5em;
+    border: 0.2em dashed var(--node-border);
+    font-size: 0.8em;
+}
+.left {
+    transform: rotate(60deg);
+    right: 0.5em;
+}
+
+.right {
+    transform: rotate(-60deg);
+    left: 0.5em;
+}
+
+/* -------------------------*/
+
+/* Travel node section */
+
+.travel-node {
+    position: absolute;
+    padding: 0.5em;
+    border: 0.2em solid var(--travel-node-border);
+    border-radius: 0.2em;
+    background-color: var(--travel-node-background);
+    color: var(--travel-node-text);
+    z-index: 10000000;
+    font-size: 1rem;
+}
+
+.parent {
+    transform: translate(-130%, -100%);
+} 
+.current {
+        transform: translate(100%, -100%);
+}
+
+
+
+
+/* -------------------------*/
+
+/* Code section*/
+
+.code-title {
+    font-size: 1.5em;
+    padding: 0.5em;
+    background-color: var(--method-background);
+    color: white;
+    border: none;
+    border-radius: 0.2em;
+}
+
+.code {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 1em;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    right: 5vw;
+    background-color: var(--line-theme);
+    border-radius: 0.5em;
+    border: 0.2em dashed var(--node-background);
+    gap: 1em;
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+}
