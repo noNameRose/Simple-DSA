@@ -215,20 +215,60 @@ html {
     gap: 1em;
 }
 
-@media (max-width: 1000px) {
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (min-width: 1600px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
-@media (max-width: 800px) {
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-width: 1599px) {
     html {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-width: 1299px) {
     html {
         font-size: 10px;
     }
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-width: 999px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-width: 799px) {
+    html {
+        font-size: 6px;
+    }
+
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-width: 599px) {
+    html {
+        font-size: 4px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 2px;
+    }
+}
+
+
+
+
+
+
+/* @media (max-width: 400px) {
+    html {
+        font-size: 4px;
+    }
+
+} */
