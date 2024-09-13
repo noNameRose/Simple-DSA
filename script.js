@@ -21,6 +21,8 @@ cards.forEach(card => {
             a.href = "../SinglyLinkedlist/index.html";
         else if (card.id === "bst") 
             a.href = "../BinaryTree/index.html";
+        else
+            a.href = "../Stack/index.html";
         a.click();
     }
 })
