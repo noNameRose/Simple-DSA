@@ -18,9 +18,9 @@ cards.forEach(card => {
     card.onclick = () => {
         let a = document.createElement("a");
         if (card.id === "ll") 
-            a.href = "./SinglyLinkedlist/index.html";
+            a.href = "../SinglyLinkedlist/index.html";
         else if (card.id === "bst") 
-            a.href = "./BinaryTree/index.html";
+            a.href = "../BinaryTree/index.html";
         a.click();
     }
 })
