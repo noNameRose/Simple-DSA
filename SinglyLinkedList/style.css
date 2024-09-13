@@ -69,6 +69,16 @@ html {
 
 /* ----------------------*/
 
+.attention {
+    padding: 0.5em;
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%);
+    border: none;
+}
 
 /* list section */
 

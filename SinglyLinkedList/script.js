@@ -14,12 +14,14 @@ methods.forEach(method => {
         opacity: 0.5,
     } );
     button.addEventListener("pointerenter", () => {
+
         tl.play();
     })
     button.addEventListener("pointerleave", () => {
         tl.reverse();
     });
     button.onclick = () => {
+        
         for (let mt of methods) {
             if (mt.classList.contains("picked")) {
                 mt.classList.remove("picked");

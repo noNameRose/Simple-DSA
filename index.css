@@ -52,6 +52,7 @@ header {
     display: flex;
     padding: 5em;
     padding-top: 5em;
+    padding-bottom: 15em;
     justify-content: center;
     gap: 5rem;
     flex-wrap: wrap;
