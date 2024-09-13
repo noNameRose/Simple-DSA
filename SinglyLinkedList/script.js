@@ -4,9 +4,9 @@ let methods = document.querySelectorAll(".method");
 export const list = document.querySelector(".list");
 
 let lst = new LinkedList();
-// lst.insert(30, 0);
-// lst.insert(20, 0);
-// lst.insert(10, 0);
+lst.insert(30, 0);
+lst.insert(20, 0);
+lst.insert(10, 0);
 methods.forEach(method => {
     let button = method.firstElementChild;
     let tl = gsap.timeline({paused: true}).to(button, {

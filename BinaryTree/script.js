@@ -4,7 +4,7 @@ const bars = document.querySelectorAll(".operations > .bar")
 export const container = document.querySelector(".container");
 export const body = document.body;
 let tree = new BinaryTree();
-
+tree.insert(30, gsap.timeline());
 for (let bar of bars) {
     const method = bar.firstElementChild;
     let tl = gsap.timeline({paused: true}).to(method, {
